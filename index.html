@@ -3,42 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>NovaTech | Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Mi Landing Page</h1>
-            <ul>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">Nova<span>Tech</span></div>
+
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre Mí</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section id="inicio">
-            <h2>Bienvenido</h2>
-            <p>Esta es una landing page creada con trabajo colaborativo en Git.</p>
-            <button id="btn-saludo">Haz clic aquí</button>
+        <section id="inicio" class="hero">
+            <div class="hero-content reveal">
+                <h1>Construimos el futuro, <br><span class="highlight">un proyecto a la vez</span></h1>
+                <p>Landing page desarrollada con trabajo colaborativo en Git: ramas, merges y despliegue continuo.</p>
+                <div class="hero-buttons">
+                    <button id="btnPrincipal" class="btn btn-primary">Empezar ahora</button>
+                    <a href="#servicios" class="btn btn-secondary">Ver más</a>
+                </div>
+            </div>
         </section>
 
-        <section id="sobre">
-            <h2>Sobre Este Proyecto</h2>
-            <p>Un ejercicio de integración de ramas en Git.</p>
+        <section id="servicios" class="services">
+            <h2 class="reveal">Nuestros Servicios</h2>
+            <div class="cards">
+                <div class="card reveal">
+                    <div class="icon">🚀</div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios rápidos, modernos y responsivos adaptados a cualquier dispositivo.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="icon">🎨</div>
+                    <h3>Diseño UI/UX</h3>
+                    <p>Interfaces atractivas pensadas en la experiencia real del usuario.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="icon">⚙️</div>
+                    <h3>Automatización</h3>
+                    <p>Flujos de trabajo eficientes que ahorran tiempo y reducen errores.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme en: contacto@ejemplo.com</p>
+        <section id="testimonios" class="testimonials">
+            <h2 class="reveal">Lo que dicen de nosotros</h2>
+            <div class="testimonial-box reveal">
+                <p id="testimonialText">"Un equipo increíble, entregaron justo lo que necesitábamos."</p>
+                <span id="testimonialAuthor">— Cliente satisfecho</span>
+                <div class="testimonial-dots" id="testimonialDots"></div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <h2 class="reveal">Hablemos</h2>
+            <form id="contactForm" class="reveal">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <input type="email" id="email" placeholder="Tu correo" required>
+                <textarea id="mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
+            <p id="formFeedback" class="form-feedback"></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Proyecto Git Colaborativo</p>
+        <p>&copy; 2026 NovaTech — Proyecto Git Colaborativo</p>
     </footer>
+
+    <button id="scrollTop" class="scroll-top" aria-label="Subir">↑</button>
 
     <script src="app.js"></script>
 </body>
